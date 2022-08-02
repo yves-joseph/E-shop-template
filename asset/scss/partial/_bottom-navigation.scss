@@ -1,0 +1,78 @@
+#bottom-navigation {
+  display: none;
+  height: 64px;
+  background-color: $white;
+  //border-top:1px solid rgba($black,0.2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -1px 0 4px rgba($black, 0.3);
+
+  ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    li {
+      list-style: none;
+      flex: 1;
+      text-align: center;
+
+      &.active {
+        a,button {
+          color: $primary;
+
+          svg {
+            fill: rgba($primary,0.8);
+          }
+        }
+      }
+
+      button{
+        border: none;
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        &:focus{
+          outline: none;
+        }
+        span {
+          display: block;
+          font-size: 0.8rem;
+        }
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+      a {
+        text-decoration: none;
+        display: block;
+
+        span {
+          display: block;
+          font-size: 0.8rem;
+        }
+
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+  }
+}
+
+@include small-phone {
+  #bottom-navigation {
+    display: block;
+  }
+}
+
+@include phone {
+  #bottom-navigation {
+    display: block;
+  }
+}

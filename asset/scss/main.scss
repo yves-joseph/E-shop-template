@@ -1,0 +1,17 @@
+@import "variable";
+
+body {
+  background-color: $body-bg;
+  color: black;
+  padding: 0;
+  margin: 0;
+  font-family: Inter,"Roboto Thin",sans-serif;
+  position: relative;
+}
+
+#page-wrapper {
+  @import "partial/page-wrapper-header";
+  @import "partial/page-wrapper-main";
+  @import "partial/bottom-navigation";
+}
+

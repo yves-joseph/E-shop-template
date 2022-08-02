@@ -1,0 +1,20 @@
+$primary:#ffc000;
+$secondary:#f04706;
+$dark:#333e48;
+$body-bg:#f6f6f9;
+$green:#109533;
+$accent:#0d52ad;
+$max-width:1710px;
+
+
+@import "bootstrap/scss/functions";
+
+// Default variable overrides
+$body-color: #111;
+
+// Required
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/reboot";
+
+@import "./breakpoint";
