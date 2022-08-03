@@ -1069,7 +1069,7 @@ body {
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a {
     text-decoration: none;
     padding: 8px 4px;
-    display: block;
+    display: flex;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a .icon-next {
     display: none;
@@ -1196,8 +1196,151 @@ body {
     width: 95%;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left {
-    flex: 1 0 0;
+    flex: 1 0 auto;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left.open {
+    left: 0;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left.open .page-wrapper-main-header-container-left-content {
+    left: 0;
+    transition: left 300ms ease-in;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left.close {
+    left: -100%;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left.close .page-wrapper-main-header-container-left-content {
+    left: -100%;
+    transition: left 300ms ease-out;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content {
+    border-radius: 0;
+    box-shadow: 0 1.2px 6px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    width: 75%;
+    position: relative;
+    left: -100%;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-close {
+    background-color: #ffc000;
+    padding: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation {
+    padding: 12px;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 4px;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 95vh;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul {
+    margin: 0;
+    padding: 0 0 0 8px;
+    position: relative;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li {
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li:hover > a {
+    color: #f04706;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li:hover > .navigation-sub-menu {
+    height: auto;
+    transition: height 400ms ease-in;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a {
+    text-decoration: none;
+    padding: 8px 4px;
+    display: block;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a .icon-next {
     display: none;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a .icon-add {
+    display: inline-block;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a .icon-sub {
+    display: none;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu {
+    display: block;
+    position: static;
+    left: auto;
+    top: auto;
+    height: auto;
+    overflow: hidden;
+    min-width: auto;
+    background-color: #fff;
+    box-shadow: none;
+    transition: none;
+    border-radius: 0;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul {
+    padding: 0 8px;
+    display: none;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li {
+    display: block;
+    list-style: none;
+    padding: 8px;
+    width: auto;
+    /*
+                        &:hover {
+                          a {
+                            color: rgba($black, 0.8);
+                          }
+                        }*/
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1rem;
+    margin-bottom: 0;
+    display: block;
+    color: rgba(0, 0, 0, 0.64);
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a .icon-next {
+    display: none;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a .icon-add {
+    display: inline-block;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a .icon-sub {
+    display: none;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li ul {
+    padding: 0;
+    display: none;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li ul li {
+    list-style: none;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.96rem;
+    padding: 6px;
+    display: block;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-center {
     flex: 1 0 100%;

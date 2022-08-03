@@ -354,7 +354,7 @@
                 > a {
                   text-decoration: none;
                   padding: 8px 4px;
-                  display: block;
+                  display: flex;
                   .icon-next{
                     display: none;
                   }
@@ -508,8 +508,168 @@
       width: 95%;
 
       #page-wrapper-main-header-container-left {
-        flex: 1 0 0;
-        display: none;
+        flex: 1 0 auto;
+        width: 100vw;
+        position: fixed;
+        top:0 ;
+        left: -100%;
+        bottom: 0;
+        padding: 0;
+        &.open{
+          left: 0;
+          .page-wrapper-main-header-container-left-content {
+            left: 0;
+            transition: left 300ms ease-in;
+          }
+        }
+        &.close{
+          .page-wrapper-main-header-container-left-content {
+            left: -100%;
+            transition: left 300ms ease-out;
+          }
+          left: -100%;
+        }
+        background-color: rgba($black,0.1);
+
+        .page-wrapper-main-header-container-left-content {
+          border-radius: 0;
+          box-shadow: 0 1.2px 6px rgba($black, 0.2);
+          padding: 0;
+          width: 75%;
+          position: relative;
+          left: -100%;
+          #navigation-close{
+            background-color: $primary;
+            padding: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          #navigation{
+            padding: 12px;
+
+          }
+          h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 8px 4px;
+          }
+
+          #navigation-menu {
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: 95vh;
+            > ul {
+              margin: 0;
+              padding: 0 0 0 8px;
+              position: relative;
+
+              > li {
+                list-style: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+                &:first-child {
+                  border-top: 1px solid rgba(0, 0, 0, 0.1);
+                }
+
+                &:hover {
+                  > a {
+                    color: $secondary;
+                  }
+
+                  > .navigation-sub-menu {
+                    height: auto;
+                    transition: height 400ms ease-in;
+                  }
+                }
+
+                > a {
+                  text-decoration: none;
+                  padding: 8px 4px;
+                  display: block;
+                  .icon-next{
+                    display: none;
+                  }
+                  .icon-add{
+                    display: inline-block;
+                  }
+                  .icon-sub{
+                    display: none;
+                  }
+                }
+
+                > .navigation-sub-menu {
+                  display: block;
+                  position: static;
+                  left: auto;
+                  top: auto;
+                  height: auto;
+                  overflow: hidden;
+                  min-width:auto;
+                  background-color: $white;
+                  box-shadow: none;
+                  transition: none;
+                  border-radius: 0;
+                  > ul {
+                    padding: 0 8px;
+                    display: none;
+                    > li {
+                      display: block;
+                      list-style: none;
+                      padding: 8px;
+                      width: auto;
+
+                      > a {
+                        text-decoration: none;
+                        font-weight: normal;
+                        font-size: 1rem;
+                        margin-bottom: 0;
+                        display: block;
+                        color: rgba($black, 0.64);
+                        .icon-next{
+                          display: none;
+                        }
+                        .icon-add{
+                          display: inline-block;
+                        }
+                        .icon-sub{
+                          display: none;
+                        }
+                      }
+
+                      /*
+                                          &:hover {
+                                            a {
+                                              color: rgba($black, 0.8);
+                                            }
+                                          }*/
+
+                      ul {
+                        padding: 0;
+                        display: none;
+
+                        li {
+                          list-style: none;
+
+                          a {
+                            text-decoration: none;
+                            color: rgba($black, 0.5);
+                            font-size: 0.96rem;
+                            padding: 6px;
+                            display: block;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
       }
 
       #page-wrapper-main-header-container-center {
