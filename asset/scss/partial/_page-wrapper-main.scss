@@ -26,14 +26,14 @@
         background-color: $white;
         border-radius: 8px;
         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.02);
-        padding: 16px;
+        padding: 14px 16px;
 
         #navigation-close {
           display: none;
         }
 
         h3 {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           font-weight: 600;
           padding: 8px 4px;
         }
@@ -48,7 +48,6 @@
             > li {
               list-style: none;
               border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
               &:first-child {
                 border-top: 1px solid rgba(0, 0, 0, 0.1);
               }
@@ -67,8 +66,22 @@
               > a {
                 text-decoration: none;
                 padding: 12px 0;
-                display: block;
-
+                display: flex;
+                align-items: center;
+                span{
+                  flex: 1;
+                  font-size: 0.96rem;
+                  font-weight: 500;
+                }
+                .icon-next{
+                  display: inline-block;
+                }
+                .icon-add{
+                  display: none;
+                }
+                .icon-sub{
+                  display: none;
+                }
               }
 
               > .navigation-sub-menu {
@@ -99,19 +112,20 @@
                     > a {
                       text-decoration: none;
                       font-weight: 600;
-                      font-size: 1.04rem;
+                      font-size: 1.01rem;
                       margin-bottom: 10px;
                       display: block;
-                      color: rgba($black, 0.64);
+                      color: rgba($black, 0.7);
+                      .icon-next{
+                        display: none;
+                      }
+                      .icon-add{
+                        display: none;
+                      }
+                      .icon-sub{
+                        display: none;
+                      }
                     }
-
-                    /*
-                                        &:hover {
-                                          a {
-                                            color: rgba($black, 0.8);
-                                          }
-                                        }*/
-
                     ul {
                       padding: 0;
 
@@ -121,7 +135,7 @@
                         a {
                           text-decoration: none;
                           color: rgba($black, 0.5);
-                          font-size: 0.96rem;
+                          font-size: 0.95rem;
                           padding: 6px;
                           display: block;
                         }
@@ -301,6 +315,7 @@
           }
           #navigation{
             padding: 12px;
+
           }
           h3 {
             font-size: 1rem;
@@ -340,7 +355,15 @@
                   text-decoration: none;
                   padding: 8px 4px;
                   display: block;
-
+                  .icon-next{
+                    display: none;
+                  }
+                  .icon-add{
+                    display: inline-block;
+                  }
+                  .icon-sub{
+                    display: none;
+                  }
                 }
 
                 > .navigation-sub-menu {
@@ -357,7 +380,7 @@
                   border-radius: 0;
                   > ul {
                     padding: 0 8px;
-                    display: block;
+                    display: none;
                     > li {
                       display: block;
                       list-style: none;
@@ -371,6 +394,15 @@
                         margin-bottom: 0;
                         display: block;
                         color: rgba($black, 0.64);
+                        .icon-next{
+                          display: none;
+                        }
+                        .icon-add{
+                          display: inline-block;
+                        }
+                        .icon-sub{
+                          display: none;
+                        }
                       }
 
                       /*
@@ -382,6 +414,7 @@
 
                       ul {
                         padding: 0;
+                        display: none;
 
                         li {
                           list-style: none;

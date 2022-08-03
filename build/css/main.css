@@ -788,13 +788,13 @@ body {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.02);
-  padding: 16px;
+  padding: 14px 16px;
 }
 #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-close {
   display: none;
 }
 #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   padding: 8px 4px;
 }
@@ -820,7 +820,22 @@ body {
 #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a {
   text-decoration: none;
   padding: 12px 0;
-  display: block;
+  display: flex;
+  align-items: center;
+}
+#page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a span {
+  flex: 1;
+  font-size: 0.96rem;
+  font-weight: 500;
+}
+#page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a .icon-next {
+  display: inline-block;
+}
+#page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a .icon-add {
+  display: none;
+}
+#page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a .icon-sub {
+  display: none;
 }
 #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu {
   display: block;
@@ -846,20 +861,23 @@ body {
   list-style: none;
   padding: 8px;
   width: 25%;
-  /*
-                      &:hover {
-                        a {
-                          color: rgba($black, 0.8);
-                        }
-                      }*/
 }
 #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a {
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.04rem;
+  font-size: 1.01rem;
   margin-bottom: 10px;
   display: block;
-  color: rgba(0, 0, 0, 0.64);
+  color: rgba(0, 0, 0, 0.7);
+}
+#page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a .icon-next {
+  display: none;
+}
+#page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a .icon-add {
+  display: none;
+}
+#page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a .icon-sub {
+  display: none;
 }
 #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li ul {
   padding: 0;
@@ -870,7 +888,7 @@ body {
 #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li ul li a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 0.96rem;
+  font-size: 0.95rem;
   padding: 6px;
   display: block;
 }
@@ -1053,6 +1071,15 @@ body {
     padding: 8px 4px;
     display: block;
   }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a .icon-next {
+    display: none;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a .icon-add {
+    display: inline-block;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a .icon-sub {
+    display: none;
+  }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu {
     display: block;
     position: static;
@@ -1068,7 +1095,7 @@ body {
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul {
     padding: 0 8px;
-    display: block;
+    display: none;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li {
     display: block;
@@ -1090,8 +1117,18 @@ body {
     display: block;
     color: rgba(0, 0, 0, 0.64);
   }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a .icon-next {
+    display: none;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a .icon-add {
+    display: inline-block;
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a .icon-sub {
+    display: none;
+  }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li ul {
     padding: 0;
+    display: none;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li ul li {
     list-style: none;
