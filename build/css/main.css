@@ -825,7 +825,7 @@ body {
 }
 #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a span {
   flex: 1;
-  font-size: 0.96rem;
+  font-size: 0.99rem;
   font-weight: 500;
 }
 #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a .icon-next {
@@ -865,7 +865,7 @@ body {
 #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a {
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.01rem;
+  font-size: 0.98rem;
   margin-bottom: 10px;
   display: block;
   color: rgba(0, 0, 0, 0.7);
@@ -887,8 +887,8 @@ body {
 }
 #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li ul li a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.96rem;
   padding: 6px;
   display: block;
 }
@@ -1049,7 +1049,7 @@ body {
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul {
     margin: 0;
-    padding: 0 0 0 8px;
+    padding: 0;
     position: relative;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li {
@@ -1070,6 +1070,7 @@ body {
     text-decoration: none;
     padding: 8px 4px;
     display: flex;
+    font-size: 0.9rem;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > a .icon-next {
     display: none;
@@ -1081,7 +1082,6 @@ body {
     display: none;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu {
-    display: block;
     position: static;
     left: auto;
     top: auto;
@@ -1092,10 +1092,12 @@ body {
     box-shadow: none;
     transition: none;
     border-radius: 0;
+    display: none;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul {
-    padding: 0 8px;
-    display: none;
+    padding: 0;
+    display: block;
+    background-color: #f8f9fa;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li {
     display: block;
@@ -1112,10 +1114,13 @@ body {
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a {
     text-decoration: none;
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 0;
-    display: block;
+    display: flex;
     color: rgba(0, 0, 0, 0.64);
+  }
+  #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a span {
+    flex: 1;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li > a .icon-next {
     display: none;
@@ -1129,16 +1134,19 @@ body {
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li ul {
     padding: 0;
     display: none;
+    background-color: #e9ecef;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li ul li {
     list-style: none;
+    display: block;
+    padding: 8px;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-left .page-wrapper-main-header-container-left-content #navigation-menu > ul > li > .navigation-sub-menu > ul > li ul li a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.5);
-    font-size: 0.96rem;
     padding: 6px;
     display: block;
+    font-size: 0.9rem;
   }
   #page-wrapper #page-wrapper-main-header #page-wrapper-main-header-container #page-wrapper-main-header-container-center {
     flex: 1 0 100%;

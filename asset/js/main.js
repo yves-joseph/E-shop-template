@@ -24,4 +24,37 @@ export function categoryMobileMenu() {
     }
 }
 
+export function categoryMobileToggle() {
+    const sub_menus = document.querySelectorAll('.navigation-sub-menu,.navigation-sub-menu_');
+
+    console.log(sub_menus)
+    for (let i = 0; i < sub_menus.length; i++) {
+        const __sub_menu = sub_menus.item(i),
+            __sub_menu_btn = __sub_menu.previousElementSibling,
+            add_icon = __sub_menu_btn.querySelector('.icon-add'),
+            sub_icon = __sub_menu_btn.querySelector('.icon-sub'),
+            query = matchMedia('(max-width:992px)');
+
+        if (__sub_menu_btn) {
+            __sub_menu_btn.addEventListener('click', function (e) {
+                if (query.matches) {
+                    e.preventDefault();
+                    if (__sub_menu.style.display === "" || __sub_menu.style.display === "none") {
+                        __sub_menu.style.display = "block";
+                        add_icon.style.display = "none";
+                        sub_icon.style.display = "block";
+                    } else {
+                        __sub_menu.style.display = "none";
+                        add_icon.style.display = "block";
+                        sub_icon.style.display = "none";
+                    }
+                }
+            });
+        }
+
+    }
+
+}
+
 categoryMobileMenu();
+categoryMobileToggle();
