@@ -10,6 +10,7 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "authFixedNavBar": () => (/* binding */ authFixedNavBar),
 /* harmony export */   "categoryMobileMenu": () => (/* binding */ categoryMobileMenu),
 /* harmony export */   "categoryMobileToggle": () => (/* binding */ categoryMobileToggle)
 /* harmony export */ });
@@ -43,7 +44,6 @@ function categoryMobileMenu() {
 }
 function categoryMobileToggle() {
   var sub_menus = document.querySelectorAll('.navigation-sub-menu,.navigation-sub-menu_');
-  console.log(sub_menus);
 
   var _loop = function _loop(i) {
     var __sub_menu = sub_menus.item(i),
@@ -75,8 +75,28 @@ function categoryMobileToggle() {
     _loop(i);
   }
 }
+function authFixedNavBar() {
+  var nav = document.getElementById('page-wrapper-header'),
+      query = matchMedia('(max-width:992px)');
+  fixedNavBarAction();
+
+  window.onscroll = function () {
+    fixedNavBarAction();
+  };
+
+  function fixedNavBarAction() {
+    if (!query.matches) {
+      if (document.documentElement.scrollTop < 116) {
+        if (nav.classList.contains('fixed')) nav.classList.remove('fixed');
+      } else {
+        if (!nav.classList.contains('fixed')) nav.classList.add('fixed');
+      }
+    }
+  }
+}
 categoryMobileMenu();
 categoryMobileToggle();
+authFixedNavBar();
 
 /***/ }),
 

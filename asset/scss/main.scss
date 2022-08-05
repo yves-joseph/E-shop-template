@@ -12,6 +12,7 @@ body {
 #page-wrapper {
   @import "partial/page-wrapper-header";
   @import "partial/page-wrapper-main";
+  @import "partial/page-wrapper-main-body";
   @import "partial/bottom-navigation";
 }
 

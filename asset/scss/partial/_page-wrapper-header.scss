@@ -2,6 +2,16 @@
   height: 82px;
   max-height: 82.6px;
   background-color: $primary;
+  transition: all 100ms ease-out;
+  z-index: 4;
+  &.fixed{
+    position: sticky;
+    top: 0;
+    box-shadow: 1px 0 6px rgba($black,0.2);
+    height: 80px;
+    transition: all 300ms linear;
+    z-index: 8;
+  }
 
   #page-wrapper-header-container {
     width: 90%;
