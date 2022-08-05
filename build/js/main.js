@@ -11,7 +11,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "categoryMobileMenu": () => (/* binding */ categoryMobileMenu),
-/* harmony export */   "categoryMobileToggle": () => (/* binding */ categoryMobileToggle)
+/* harmony export */   "categoryMobileToggle": () => (/* binding */ categoryMobileToggle),
+/* harmony export */   "navBarAutoFixed": () => (/* binding */ navBarAutoFixed)
 /* harmony export */ });
 function categoryMobileMenu() {
   var buttons = document.querySelectorAll('.category-btn-toggle'),
@@ -43,7 +44,6 @@ function categoryMobileMenu() {
 }
 function categoryMobileToggle() {
   var sub_menus = document.querySelectorAll('.navigation-sub-menu,.navigation-sub-menu_');
-  console.log(sub_menus);
 
   var _loop = function _loop(i) {
     var __sub_menu = sub_menus.item(i),
@@ -75,8 +75,31 @@ function categoryMobileToggle() {
     _loop(i);
   }
 }
+function navBarAutoFixed() {
+  var nav = document.getElementById('page-wrapper-header'),
+      query = matchMedia('(max-width:992px)');
+
+  if (nav) {
+    autoFixedNavBar();
+
+    window.onscroll = function () {
+      autoFixedNavBar();
+    };
+  }
+
+  function autoFixedNavBar() {
+    if (!query.matches) {
+      if (document.documentElement.scrollTop < 116) {
+        if (nav.classList.contains('fixed')) nav.classList.remove('fixed');
+      } else {
+        if (!nav.classList.contains('fixed')) nav.classList.add('fixed');
+      }
+    }
+  }
+}
 categoryMobileMenu();
 categoryMobileToggle();
+navBarAutoFixed();
 
 /***/ }),
 

@@ -26,8 +26,6 @@ export function categoryMobileMenu() {
 
 export function categoryMobileToggle() {
     const sub_menus = document.querySelectorAll('.navigation-sub-menu,.navigation-sub-menu_');
-
-    console.log(sub_menus)
     for (let i = 0; i < sub_menus.length; i++) {
         const __sub_menu = sub_menus.item(i),
             __sub_menu_btn = __sub_menu.previousElementSibling,
@@ -56,5 +54,29 @@ export function categoryMobileToggle() {
 
 }
 
+export function navBarAutoFixed() {
+    const nav = document.getElementById('page-wrapper-header'),
+        query = matchMedia('(max-width:992px)');
+
+    if (nav) {
+        autoFixedNavBar();
+        window.onscroll = () => {
+            autoFixedNavBar();
+        }
+    }
+
+    function autoFixedNavBar() {
+        if (!query.matches) {
+            if (document.documentElement.scrollTop < 116) {
+                if (nav.classList.contains('fixed')) nav.classList.remove('fixed')
+            } else {
+                if (!nav.classList.contains('fixed')) nav.classList.add('fixed')
+            }
+        }
+
+    }
+}
+
 categoryMobileMenu();
 categoryMobileToggle();
+navBarAutoFixed();

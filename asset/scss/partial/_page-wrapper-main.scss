@@ -279,6 +279,7 @@
         position: fixed;
         top:0 ;
         left: -100%;
+        z-index: 8;
         bottom: 0;
         padding: 0;
         &.open{
@@ -518,6 +519,7 @@
         position: fixed;
         top:0 ;
         left: -100%;
+        z-index: 8;
         bottom: 0;
         padding: 0;
         &.open{
