@@ -10,9 +10,9 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "authFixedNavBar": () => (/* binding */ authFixedNavBar),
 /* harmony export */   "categoryMobileMenu": () => (/* binding */ categoryMobileMenu),
-/* harmony export */   "categoryMobileToggle": () => (/* binding */ categoryMobileToggle),
-/* harmony export */   "navBarAutoFixed": () => (/* binding */ navBarAutoFixed)
+/* harmony export */   "categoryMobileToggle": () => (/* binding */ categoryMobileToggle)
 /* harmony export */ });
 function categoryMobileMenu() {
   var buttons = document.querySelectorAll('.category-btn-toggle'),
@@ -75,19 +75,16 @@ function categoryMobileToggle() {
     _loop(i);
   }
 }
-function navBarAutoFixed() {
+function authFixedNavBar() {
   var nav = document.getElementById('page-wrapper-header'),
       query = matchMedia('(max-width:992px)');
+  fixedNavBarAction();
 
-  if (nav) {
-    autoFixedNavBar();
+  window.onscroll = function () {
+    fixedNavBarAction();
+  };
 
-    window.onscroll = function () {
-      autoFixedNavBar();
-    };
-  }
-
-  function autoFixedNavBar() {
+  function fixedNavBarAction() {
     if (!query.matches) {
       if (document.documentElement.scrollTop < 116) {
         if (nav.classList.contains('fixed')) nav.classList.remove('fixed');
@@ -99,7 +96,7 @@ function navBarAutoFixed() {
 }
 categoryMobileMenu();
 categoryMobileToggle();
-navBarAutoFixed();
+authFixedNavBar();
 
 /***/ }),
 
